@@ -13,56 +13,56 @@ matplotlib <br>
 numpy <br>
 
 # Setup
-1. Install Required Libraries
-Install the required Python libraries using pip:
-pip install -r requirements.txt
-
-2. Dataset Structure
+1. Install Required Libraries <br>
+Install the required Python libraries using pip: <br>
+pip install -r requirements.txt <br>
+ <br>
+2. Dataset Structure <br>
    
-  1. Labeled Data (labeled/)
-    ● Images Directory: labeled/images/
-      ○ Contains annotated images of sesame fields
-      ○ Used for initial supervised learning
-    ● Annotations Directory: labeled/annotations/
-      ○ Corresponding annotation files for labeled images
-      ○ Uses YOLOv8 annotation format
-      ○ Provides ground truth for object detection training
+  1. Labeled Data (labeled/) <br>
+    ● Images Directory: labeled/images/ <br>
+      ○ Contains annotated images of sesame fields <br>
+      ○ Used for initial supervised learning <br>
+    ● Annotations Directory: labeled/annotations/ <br>
+      ○ Corresponding annotation files for labeled images <br>
+      ○ Uses YOLOv8 annotation format <br>
+      ○ Provides ground truth for object detection training <br>
 
-  2. Unlabeled Data (unlabeled/)
-    ● Purpose: Semi-supervised learning
-    ● Contains a larger set of unannotated images of sesame fields
-    ● Allows for expanding model training beyond labeled data
-    ● No corresponding annotation files
+  2. Unlabeled Data (unlabeled/) <br>
+    ● Purpose: Semi-supervised learning <br>
+    ● Contains a larger set of unannotated images of sesame fields <br>
+    ● Allows for expanding model training beyond labeled data <br>
+    ● No corresponding annotation files <br>
 
-  3. Test Data (test/)
-    ● Images Directory: test/images/
-      ○ Contains test images for model evaluation
-      ○ Used for generating final predictions
-    ● Annotations Directory: test/annotations/
-      ○ Contains ground truth annotations for test images
-      ○ Used for assessing model performance
+  3. Test Data (test/) <br>
+    ● Images Directory: test/images/ <br>
+      ○ Contains test images for model evaluation <br>
+      ○ Used for generating final predictions <br>
+    ● Annotations Directory: test/annotations/ <br>
+      ○ Contains ground truth annotations for test images <br>
+      ○ Used for assessing model performance <br>
 
-Annotation Details
-YOLOv8 Annotation Format
-Annotation Structure
-Each line in the annotation file typically represents: <class_id> <x_center> <y_center>
-<width> <height>
-● class_id: 0 (weed) or 1 (crop)
-● Coordinates are normalized (0-1 scale)
+Annotation Details <br>
+YOLOv8 Annotation Format <br>
+Annotation Structure <br>
+Each line in the annotation file typically represents: <class_id> <x_center> <y_center> 
+<width> <height> <br>
+● class_id: 0 (weed) or 1 (crop) <br>
+● Coordinates are normalized (0-1 scale) <br>
 
-3. Run the Notebook
-Download the Jupyter Notebook file (sol.ipynb).
-Open the notebook in Jupyter Lab or Jupyter Notebook.
-Run all cells in sequence. The notebook will:
-Prepare dataset paths and YAML file for YOLOv8 training.
-Train the YOLOv8 model.
-Evaluate the model's performance.
-Save the trained model and predictions.
-4. Model Training
-In the notebook, you can adjust the training parameters, such as:
+3. Run the Notebook <br>
+Download the Jupyter Notebook file (final.ipynb). <br>
+Open the notebook in Jupyter Lab or Jupyter Notebook. <br>
+Run all cells in sequence. The notebook will: <br>
+Prepare dataset paths and YAML file for YOLOv8 training. <br>
+Train the YOLOv8 model. <br>
+Evaluate the model's performance. <br>
+Save the trained model and predictions. <br>
+4. Model Training <br>
+In the notebook, you can adjust the training parameters, such as: <br>
 
-Number of epochs (epochs=10)
-Image size (imgsz=256)
-Batch size (batch=16)
-Device for training (device='cpu' or cuda for GPU)
-To start training, run the training cell, and the model will be trained on your dataset. The model checkpoints will be saved in the results/ directory.
+Number of epochs (epochs=10) <br>
+Image size (imgsz=256) <br>
+Batch size (batch=16) <br>
+Device for training (device='cpu' or cuda for GPU) <br>
+To start training, run the training cell, and the model will be trained on your dataset. The model checkpoints will be saved in the results/ directory. <br>
