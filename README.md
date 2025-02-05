@@ -4,13 +4,13 @@
 This project trains a YOLOv8 model to detect weeds and crops using custom datasets. The model is trained on images and labels stored in specified directories, and the trained model can be exported for further use in applications like weed detection in agriculture.
 
 # Requirements
-Python 3.x
-Jupyter Notebook
-Libraries:
-ultralytics (for YOLOv8)
-sympy
-matplotlib
-numpy
+Python 3.x <br>
+Jupyter Notebook <br>
+Libraries: <br>
+ultralytics (for YOLOv8) <br>
+sympy <br>
+matplotlib <br>
+numpy <br>
 
 # Setup
 1. Install Required Libraries
